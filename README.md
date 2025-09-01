@@ -9,7 +9,6 @@ A web application built with Django that takes user input text and predicts its 
 - Pandas, NumPy
 - Git / GitHub
 - Render (for online deployment)
-- Docker (optional)
 
 ## Features
 - Takes text input from the user and analyzes sentiment
