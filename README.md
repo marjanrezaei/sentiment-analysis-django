@@ -45,13 +45,5 @@ AI model: Multinomial Naive Bayes using Scikit-learn
 
 Model files: sentiment_model.pkl and vectorizer.pkl
 
-Online Demo
-View Live Project
-
-Sample Screenshots
-
-
 Author
 Marjan Rezaei
-LinkedIn
-
