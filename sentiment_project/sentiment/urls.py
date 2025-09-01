@@ -1,5 +1,6 @@
-from django.urls import path, include
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('sentiment/', include('sentiment.urls')),
+    path('predict/', views.predict_sentiment, name='predict_sentiment'),
 ]

@@ -1,48 +1,72 @@
-# Sentiment Analysis Web App
+# Sentiment Analysis with Django
 
-A web application built with Django that takes user input text and predicts its sentiment (positive or negative) using an AI model.
+This project is a simple web application built with **Django** and **scikit-learn** that performs sentiment analysis on user input text. It classifies text as **positive** or **negative**.
 
-## Technologies
-- Python
-- Django
-- Scikit-learn
-- Pandas, NumPy
-- Git / GitHub
-- Render (for online deployment)
+---
 
 ## Features
-- Takes text input from the user and analyzes sentiment
-- Predicts whether the text is positive or negative
-- Integrated into a Django web application
-- Online deployment for direct use
+- Django-based web interface
+- Machine Learning model trained with scikit-learn
+- Naive Bayes classifier for sentiment detection
+- Pre-trained model saved with joblib (`sentiment_model.pkl`, `vectorizer.pkl`)
 
-## Installation / Setup
+---
+
+## Installation
 
 1. Clone the repository:
-```bash
-git clone <GitHub repository link>
-cd sentiment-analysis-django
-Install required packages:
+   ```bash
+   git clone https://github.com/marjanrezaei/sentiment-analysis-django.git
+   cd sentiment-analysis-django
+Create a virtual environment and activate it:
+
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate   # Linux / Mac
+venv\Scripts\activate      # Windows
+Install dependencies:
 
 bash
 Copy code
 pip install -r requirements.txt
-Run the Django server:
+Train the model (optional, if you want to regenerate it):
+
+bash
+Copy code
+python train_model.py
+Usage
+Run migrations:
+
+bash
+Copy code
+python manage.py migrate
+Start the development server:
 
 bash
 Copy code
 python manage.py runserver
-Open your browser and go to:
+Open in browser:
 
-arduino
+cpp
 Copy code
-http://127.0.0.1:8000/sentiment/
-Dataset and AI Model
-Suggested dataset: IMDb Movie Reviews (50k movie reviews)
+http://127.0.0.1:8000/
+Enter text in the input box, and the app will classify it as positive or negative.
 
-AI model: Multinomial Naive Bayes using Scikit-learn
+Project Structure
+bash
+Copy code
+sentiment-analysis-django/
+│── ml/                     # Machine Learning logic
+│── templates/              # HTML templates
+│── sentiment_model.pkl     # Saved ML model
+│── vectorizer.pkl          # Saved vectorizer
+│── train_model.py          # Script to train model
+│── manage.py
+│── requirements.txt
+│── README.md
+Contributing
+Feel free to fork this repository, make improvements, and submit a pull request.
 
-Model files: sentiment_model.pkl and vectorizer.pkl
-
-Author
-Marjan Rezaei
+License
+This project is licensed under the MIT License.
